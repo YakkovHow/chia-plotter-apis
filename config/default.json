@@ -1,0 +1,17 @@
+{
+    "server": {
+        "port": "8443",
+        "p12KeyStorePath": "/home/plotter/tls/mss_keystore.p12",
+        "requestCert": true,
+        "rejectUnauthorized": false
+    },
+    "redisPipe": {
+        "ns": "mss-queues",
+        "host": "192.168.1.54",
+        "port": "6379",
+        "qname": "mss-to-plotter-pipe"
+    },
+    "capacityCheck": {
+        "cronPattern": "5 */5 * * * *"
+    }
+}

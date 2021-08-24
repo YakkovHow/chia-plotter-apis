@@ -1,39 +1,38 @@
-var express = require('express');
-var router = express.Router();
+import express from 'express';
+const router = express.Router();
 
-router.get('/query', (req, res) => {
-    console.log("Received query")
+router.get('/query/progress', (req, res) => {
+    console.log("Received progress query")
     // Mock
     res.json(
         [
             {
-                "lastQueriedPlotId": "plot_id_1",
+                "lastQueriedPlotId": null,
                 "currentPlot": {
-                    "id": "plot_id_2",
-                    "public_key": "key_1",
-                    "most_recent_phase": "PHASE_2",
-                    "open_time": "2021-07-16T04:03:23.204-07:00",
-                    "close_time": null,
-                    "download_link": null,
-                    "error_code": null,
-                    // "last_errored_plot_id": "plot_id_1"
+                    "id": "plot_id_1",
+                    "publicKey": "key_1",
+                    "mostRecentPhase": "_2",
+                    "openTime": "2021-07-16T04:03:23.204-07:00",
+                    "closeTime": null,
+                    "downloadLink": null,
+                    "errorCode": null
                 }
             },
             {
-                "lastQueriedPlotId": "plot_id_3",
+                "lastQueriedPlotId": null,
                 "currentPlot": {
-                    "id": "plot_id_3",
-                    "public_key": "key_2",
-                    "most_recent_phase": "PHASE_1",
-                    "open_time": "2021-07-16T04:03:24.567-07:00",
-                    "close_time": null,
-                    "download_link": null,
-                    "error_code": null,
+                    "id": "plot_id_2",
+                    "publicKey": "key_2",
+                    "mostRecentPhase": "_1",
+                    "openTime": "2021-07-16T04:03:24.567-07:00",
+                    "closeTime": null,
+                    "downloadLink": null,
+                    "errorCode": null,
                     // "last_errored_plot_id": null
                 }
             }
         ]
     );
-})
+});
 
-module.exports = router;
+export default router;
